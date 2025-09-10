@@ -1,34 +1,52 @@
-import React, { useRef } from "react";
-import "./App.css";
-
+import React, { useState, useRef, useEffect } from "react";
 import Home from "./components/Home";
 import About from "./components/About";
+import Projects from "./components/Project";
+import Contact from "./components/Contact";
+import "./App.css";
 
 export default function App() {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
 
+  // Hook useState para contar quantas vezes o usuário rolou
+  const [scrollCount, setScrollCount] = useState(0);
+
+  // Hook useEffect para detectar scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollCount((prev) => prev + 1); // incrementa toda vez que rolar
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Hook useRef + função para rolar para cada seção
   const scrollToSection = (ref) => {
-    ref.current.scrollIntoView({ behavior: "smooth" });
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
-    <div>
-      <header className="header">
-        <h1 className="logo">Bruna Santos</h1>
-        <nav className="nav-links">
-          <button onClick={() => scrollToSection(homeRef)}>Home</button>
-          <button onClick={() => scrollToSection(aboutRef)}>Sobre</button>
-        </nav>
-      </header>
-
+    <div className="app-container">
       <main>
-        <Home homeRef={homeRef} />
+        <Home 
+          homeRef={homeRef} 
+          scrollToSection={scrollToSection} 
+          projectsRef={projectsRef} 
+          contactRef={contactRef} 
+        />
         <About aboutRef={aboutRef} />
+        <Projects projectsRef={projectsRef} />
+        <Contact contactRef={contactRef} />
       </main>
 
-      <footer className="footer">
+      <footer className="app-footer">
         <p>&copy; {new Date().getFullYear()} Bruna Santos. Todos os direitos reservados.</p>
+        <p>{scrollCount}</p>
       </footer>
     </div>
   );
