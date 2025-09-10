@@ -22,18 +22,7 @@ body {
   font-size: 1.5rem;
 }
 
-.nav-links button {
-  background: none;
-  border: none;
-  color: #fff;
-  margin-left: 1rem;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.nav-links button:hover {
-  text-decoration: underline;
-}
+  
 
 .footer {
   text-align: center;
