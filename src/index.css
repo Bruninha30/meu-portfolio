@@ -1,0 +1,27 @@
+/* Reset simples */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fafafa;
+  color: #333;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #e91e63; /* rosa */
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
