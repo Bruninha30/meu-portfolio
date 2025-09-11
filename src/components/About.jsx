@@ -1,6 +1,7 @@
 import React from 'react';
 import '../style/About.css';
-import minhaFoto from '../assets/minha-foto.jpg'; // Coloque sua foto nessa pasta
+import minhaFoto from '../assets/minha-foto.jpg';
+
 
 export default function About({ aboutRef }) {
   return (
