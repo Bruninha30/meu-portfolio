@@ -1,57 +1,98 @@
+/* Contact.css */
+
 .contact-section {
-  padding: 5rem 1rem;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 4rem 2rem;
+  background: #fff0f5; /* rosa suave */
+  text-align: center;
 }
 
 .contact-title {
   font-size: 2rem;
   font-weight: bold;
-  color: #fff;
+  color: #d63384;
   margin-bottom: 1rem;
+  position: relative;
+}
+
+.contact-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #f5a1c1;
+  border-radius: 3px;
+  margin: 0.5rem auto 2rem;
 }
 
 .contact-text {
-  color: #aaa;
-  max-width: 700px;
-  text-align: center;
+  font-size: 1rem;
+  color: #555;
   margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
 }
 
 .contact-form {
+  max-width: 600px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 500px;
+  gap: 1.2rem;
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 0.75rem 1rem;
-  margin-bottom: 1rem;
-  border-radius: 6px;
-  border: none;
-  background-color: #1f1f1f;
-  color: #fff;
+  padding: 0.9rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  resize: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #d63384;
+  box-shadow: 0 0 8px rgba(214, 51, 132, 0.3);
+  outline: none;
 }
 
 .contact-form textarea {
-  resize: vertical;
-  min-height: 120px;
+  min-height: 150px;
 }
 
 .contact-form button {
-  padding: 0.75rem;
-  background-color: #e21fb5;
+  padding: 0.9rem 2rem;
+  background: #d63384;
   color: #fff;
-  font-weight: 600;
   border: none;
-  border-radius: 6px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .contact-form button:hover {
-  background-color: #e7a7db;
+  background: #b42a6d;
+  transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+  }
+
+  .contact-form button {
+    font-size: 0.95rem;
+    padding: 0.8rem 1.8rem;
+  }
 }

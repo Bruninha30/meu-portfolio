@@ -1,0 +1,25 @@
+/* Footer.css */
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.social-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icon {
+  color: #ff4da6; /* rosa vibrante */
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #e03e91; /* rosa mais escuro no hover */
+}
