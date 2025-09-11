@@ -1,5 +1,4 @@
-/* Navbar.css */
-
+/* Estilo base */
 .navbar {
   width: 100%;
   position: fixed;
@@ -51,10 +50,11 @@
   color: #fff;
 }
 
-/* Responsividade */
+/* Responsivo para tablets */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
+    align-items: flex-start;
     padding: 0.5rem 1rem;
   }
 
@@ -62,10 +62,27 @@
     width: 100%;
     justify-content: space-around;
     margin-top: 0.5rem;
+    flex-wrap: wrap;
   }
 
   .nav-buttons button {
     font-size: 0.9rem;
     padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Responsivo para celulares */
+@media (max-width: 480px) {
+  .logo-img {
+    height: 40px;
+  }
+
+  .nav-buttons {
+    gap: 1rem;
+  }
+
+  .nav-buttons button {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
   }
 }

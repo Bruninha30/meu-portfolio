@@ -1,5 +1,4 @@
-/* Home.css */
-
+/* Seção principal */
 .home-section {
   min-height: 100vh;
   display: flex;
@@ -10,10 +9,12 @@
   padding: 2rem;
 }
 
+/* Conteúdo central */
 .home-content {
   max-width: 800px;
 }
 
+/* Título principal */
 .home-title {
   font-size: 2.5rem;
   font-weight: bold;
@@ -21,10 +22,12 @@
   margin-bottom: 1rem;
 }
 
+/* Destaque no nome */
 .title-nome {
   color: #d63384; /* rosa destaque */
 }
 
+/* Subtítulo */
 .home-subtitle {
   font-size: 1.2rem;
   color: #555;
@@ -32,6 +35,7 @@
   line-height: 1.6;
 }
 
+/* Botões */
 .home-buttons {
   display: flex;
   gap: 1rem;
@@ -67,4 +71,45 @@
 .btn-secondary:hover {
   background: #d63384;
   color: #fff;
+}
+
+/* Responsivo para tablets */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .home-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* Responsivo para celulares */
+@media (max-width: 480px) {
+  .home-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .home-title {
+    font-size: 1.7rem;
+  }
+
+  .home-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .home-buttons {
+    gap: 0.8rem;
+  }
 }

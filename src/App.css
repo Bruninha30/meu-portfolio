@@ -15,6 +15,7 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 50;
+  flex-wrap: wrap; /* permite quebrar em telas menores */
 }
 
 .logo {
@@ -22,11 +23,55 @@ body {
   font-size: 1.5rem;
 }
 
-  
+/* Botões de navegação dentro do header */
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap; /* quebra em linha nova em telas pequenas */
+}
 
+/* Footer */
 .footer {
   text-align: center;
   padding: 1.5rem;
   color: #aaa;
   margin-top: 2rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+    flex-direction: column; /* empilha logo e nav */
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-buttons {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .footer {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-buttons button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
 }

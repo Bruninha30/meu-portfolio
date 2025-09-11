@@ -1,5 +1,4 @@
-/* About.css */
-
+/* Estilo base */
 .about-section {
   padding: 4rem 2rem;
   background: #fff;
@@ -15,6 +14,18 @@
   width: 100%;
   gap: 3rem;
   align-items: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .about-photo {
@@ -28,7 +39,7 @@
   height: 260px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #f5a1c1; /* rosa suave */
+  border: 4px solid #f5a1c1; 
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -44,8 +55,10 @@
 .about-title {
   font-size: 2rem;
   font-weight: bold;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
   margin-bottom: 1.5rem;
-  color: #d63384; /* rosa destaque */
+  color: #d63384; 
   position: relative;
 }
 
@@ -69,12 +82,16 @@
 }
 
 .about-text strong {
-  color: #d63384; /* destaque em rosa */
+  color: #d63384; 
   font-weight: 600;
 }
 
-/* Responsividade */
+/* Responsivo para tablets */
 @media (max-width: 768px) {
+  .about-section {
+    padding: 3rem 1.5rem;
+  }
+
   .about-container {
     flex-direction: column;
     text-align: center;
@@ -92,5 +109,37 @@
 
   .about-content {
     flex: 1 1 100%;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+}
+
+/* Responsivo para celulares */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 2rem 1rem;
+  }
+
+  .about-container {
+    gap: 1.5rem;
+  }
+
+  .about-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .about-photo img {
+    width: 180px;
+    height: 180px;
   }
 }

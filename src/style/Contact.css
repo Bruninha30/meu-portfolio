@@ -1,11 +1,11 @@
-/* Contact.css */
-
+/* Seção de contato */
 .contact-section {
   padding: 4rem 2rem;
   background: #fff0f5; /* rosa suave */
   text-align: center;
 }
 
+/* Título */
 .contact-title {
   font-size: 2rem;
   font-weight: bold;
@@ -24,6 +24,7 @@
   margin: 0.5rem auto 2rem;
 }
 
+/* Texto de introdução */
 .contact-text {
   font-size: 1rem;
   color: #555;
@@ -34,6 +35,7 @@
   line-height: 1.6;
 }
 
+/* Formulário */
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
@@ -63,6 +65,7 @@
   min-height: 150px;
 }
 
+/* Botão */
 .contact-form button {
   padding: 0.9rem 2rem;
   background: #d63384;
@@ -80,7 +83,7 @@
   transform: translateY(-2px);
 }
 
-/* Responsividade */
+/* Responsivo para tablets */
 @media (max-width: 768px) {
   .contact-section {
     padding: 3rem 1.5rem;
@@ -94,5 +97,31 @@
   .contact-form button {
     font-size: 0.95rem;
     padding: 0.8rem 1.8rem;
+  }
+}
+
+/* Responsivo para celulares */
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 2rem 1rem;
+  }
+
+  .contact-title {
+    font-size: 1.6rem;
+  }
+
+  .contact-text {
+    font-size: 0.95rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .contact-form button {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.5rem;
   }
 }

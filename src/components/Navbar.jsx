@@ -5,7 +5,7 @@ export default function Navbar({ scrollToSection, homeRef, aboutRef, projectsRef
   return (
     <nav className="navbar">
       <div className="logo">
-        <img src="./logo.png" alt="Bruna Santos" className="logo-img" />
+        <img src="/logo.png" alt="Bruna Santos" className="logo-img" />
       </div>
       <div className="nav-buttons">
         <button onClick={() => scrollToSection(homeRef)}>Home</button>
